@@ -1,0 +1,51 @@
+a Domain Specific Language(DSL) for Pet Care system project
+
+* Mogram 
+pet care system
+pet owner
+owner 
+task
+
+* (in)formal definition
+pet care system (PCS) is a set of pets (P), pet owners (PO) and tasks (T) which pet owners must do. 
+
+* mathematical expression of line 9:
+PCS = {P,PO,T}
+
+-------------------------------------
+* Symbol Table 
+Symbol   meaning 
+------   --------
+*      comment 
+PCS    pet care system
+P      pet
+PO     pet owner
+T      task
+#      the object is countable 
+?      vagueness  
+==     interaction 
+?==     unknown interaction (I am not sure about the existence the interaction or its type), it is possible to have this interaction 
+-------------------------------------
+
+
+* Counting: Countable or uncountable
+pet care system (PCS: #) is a set of pets (P: #), pet owners (PO: #) and tasks (T:) which pet owners must do. 
+** numerical domain for each symbol (mogram)
+PCS: 1-N : N in Natural Number
+P : 1-N
+PO : 1-N 
+T : 0-N
+
+* Interaction(s)
+PCS = {P,PO,T}
+ - each element has at least one Interaction with another element in PCS. 
+ - ? 
+  example: 
+    P == PO
+    P ?== P 
+    PO == PO
+    PO == T
+
+** Semantics:
+  structure: <mogram> == <mogram> ... == <mogram>: order of the mograms are not important. 
+  concept: if <mogram_1> == <mogram_2>, then there is a message passing between mograms. 
